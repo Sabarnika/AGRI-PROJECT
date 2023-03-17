@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Crop Predictor</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    h1{
+        color: blueviolet;
+    }
+    h2{
+      color: green;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    body
+    {
+      background-image: url(crop.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+    h2{
+      text-align: center;
+      font-size: 30px;
+    }
+    #ii
+    {
+      font-size: 20px;
+      font-weight:500;
+      color: rgb(24, 104, 190);
+    }
+    p{
+        font-size: 20px;
+        text-indent: 30px;
+    }
+    .nav-link
+    {
+        font-size:22px;
+        color: azure;
+    }
+    .nav-link:hover
+    {
+        background-color:rgb(14, 112, 68);
+        border-radius: 10px;
+        color: white;
+    }
+    .yld
+    {
+      text-indent: 30px;
+    }
+  </style>
+
+</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h1>Crop Predictor</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="crop.html">Crop Predictor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fertilizer.html">Fertilizer Predictor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="history.html">Previous Yield</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Settings
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="reset.html">Reset Password</a></li>
+                  <li><a class="dropdown-item" href="#">History</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-but">
+                <a class="btn btn-outline-light" href="#">SignUp</a>
+            </li>
+            <li class="nav-but">
+                <a class="btn btn-outline-light" href="#">Login</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br>
+      <p>
+        Earlier, crop cultivation was undertaken on the basis of farmers’ hands-on expertise. 
+        . Accurate crop prediction results in increased crop production.  In general, agro-climatic input parameters such as soil texture, rainfall, and temperature influence crop production. Input parameters for agriculture vary from region to region, and it is daunting to collect such information over large tracts of land. 
+        However, climate change has begun to affect crop yields badly.</p><br>
+      <p>Farmers can avoid stress and confusions which adversely gives them a confidence on their profession...You can predict your accurate crop by this technology...</p>
+      <div class="container-fluid bg-white text-dark py-3">
+        <header class="text-center">
+            <h2 class="display-6">Find your Recommended Crop</h2>
+        </header>
+      </div>
+      <section class="container">
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="nvalue" class="form-label" id="ii">Enter N value(Nitrogen)</label>
+              <input type="number" class="form-control" id="nvalue" required>
+            </div>
+            <div class="col-md-6">
+              <label for="pvalue" class="form-label" id="ii">Enter P value(Phosphorous)</label>
+              <input type="number" class="form-control" id="pvalue" required>
+            </div>
+            <div class="col-md-6">
+                <label for="kvalue" class="form-label" id="ii">Enter K value(Potassium)</label>
+                <input type="number" class="form-control" id="kvalue" required>
+              </div>
+              <div class="col-md-6">
+                <label for="ph" class="form-label" id="ii">pH</label>
+                <input type="number" class="form-control" id="ph" required min="1" max="14">
+              </div>
+              <div class="col-md-6">
+                <label for="rain" class="form-label" id="ii">Annual Rainfall in mm</label>
+                <input type="number" class="form-control" id="rain" required>
+              </div>
+              <div class="col-md-6">
+                <label for="temp" class="form-label" id="ii">Temperature</label>
+                <input type="number" class="form-control" id="temp" required>
+              </div>
+              <div class="col-md-6">
+                <label for="hum" class="form-label" id="ii">Humidity</label>
+                <input type="number" class="form-control" id="hum" required>
+              </div><br>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Find my crop</button>
+              </div>
+          </form>
+      </section><br><br>
+      <div class="container-fluid bg-white text-dark py-3">
+      <h2>Planting Seasons</h2>
+      </div><br>
+      <p>
+        And also people as well as farmers are unaware of knowing the seasonal crops that has high demand and future impact in the place of food beverages.
+        All crops can't be cultivated in any of the month.And the yield also depends on season to season.It's our responsibility to find the suitable crop. To know those information, you can refer here.....
+      </p>
+      <section class="container">
+        <form class="row g-3">
+          <div class="col-md-12">
+            <label class="form-label" for="season" id="ii">Season</label>
+            <select name="season" id="season">
+                <option value=""></option>
+                  <option value="Kharif">Kharif</option>
+                  <option value="Rabi">Rabi</option>
+                  <option value="Zaid">Zaid</option>
+                  <option value="WholeYear">WholeYear</option>
+            </select>
+          </div>
+        <div class="col-md-12">
+          <label class="form-label" for="month" id="ii">Month</label>
+          <select name="month" id="month">
+              <option value=""></option>
+                <option value="Jan">January</option>
+                <option value="Feb">February</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="may">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+          </select>
+        </div><br>
+        <p class="yld">Do you want to know the yield ?</p>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="yield">
+            Yes 
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="yield">
+            No
+          </label>
+        </div><br><br>
+        <div class="col-12">
+          <button type="submit" class="btn btn-success">Find Seasonal Crop and its Yield</button>
+        </div>
+        </form>
+      </section> 
+</body>
+</html>

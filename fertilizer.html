@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Fertilizer Predictor</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    h1{
+        color: blueviolet;
+    }
+    body{
+      background-image: url(crop.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+    #ii
+    {
+      font-size: 20px;
+      font-weight:500;
+      color: rgb(24, 104, 190);
+    }
+    h2{
+      color: green;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    p{
+        font-size: 20px;
+    }
+    .nav-link
+    {
+        font-size:22px;
+        color: azure;
+    }
+    .nav-link:hover
+    {
+        background-color:rgb(14, 112, 68);
+        border-radius: 10px;
+        color: white;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h1>Crop Predictor</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="crop.html">Crop Predictor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Fertilizer Predictor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="history.html">Previous Yield</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Settings
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="reset.html">Reset Password</a></li>
+                  <li><a class="dropdown-item" href="#">History</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-but">
+                <a class="btn btn-outline-light" href="signup.html">SignUp</a>
+            </li>
+            <li class="nav-but">
+                <a class="btn btn-outline-light" href="login.html">Login</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav><br><br><br><br>
+      <p>. Seed companies need to predict the performances of new hybrids in various environments to breed for better varieties. Fertilizer Recommendation system for disease Prediction recommends the best crop to grow, fertilizers to use and the diseases caught by your crops. A fertilizer recommendation is the research-based set of guidelines, or management practices, for supplying fertilizer to the crop to achieve yield and quality goals (economic) in a manner that minimizes nutrient losses to the environment.
+      </p><br><p>The goal of research on fertilizer rate is to determine the amount of fertilizer needed to achieve a commercial crop yield with sufficient quality that is economically acceptable for the grower.</p>
+      <div class="container-fluid bg-white text-dark py-3">
+        <header class="text-center">
+            <h2 class="display-6">Find your Recommended Fertilizer</h2>
+        </header>
+      </div>
+      <section class="container">
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="nvalue" class="form-label" id="ii">Enter N value(Nitrogen)</label>
+              <input type="number" class="form-control" id="nvalue" required>
+            </div>
+            <div class="col-md-6">
+              <label for="pvalue" class="form-label" id="ii">Enter P value(Phosphorous)</label>
+              <input type="number" class="form-control" id="pvalue" required>
+            </div>
+            <div class="col-md-6">
+                <label for="kvalue" class="form-label" id="ii">Enter K value(Potassium)</label>
+                <input type="number" class="form-control" id="kvalue" required>
+              </div>
+              <div class="col-md-6">
+                <label for="soil" class="form-label" id="ii">Soil Type</label>
+                <input type="text" class="form-control" id="soil" required >
+              </div>
+              <div class="col-md-6">
+                <label for="crop" class="form-label" id="ii">Crop</label>
+                <input type="text" class="form-control" id="crop" required>
+              </div>
+              <div class="col-md-6">
+                <label for="temp" class="form-label" id="ii">Temperature</label>
+                <input type="number" class="form-control" id="temp" required>
+              </div>
+              <div class="col-md-6">
+                <label for="hum" class="form-label" id="ii">Humidity</label>
+                <input type="number" class="form-control" id="hum" required>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Find my Fertilizer</button>
+              </div>
+          </form>
+      </section>
+</body>
+</html>
