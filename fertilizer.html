@@ -2,20 +2,33 @@
 <html lang="en">
   <title>Fertilizer Predictor</title>
   <meta charset="utf-8">
+  <script src="https://kit.fontawesome.com/6b0d107a31.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <style>
-    h1{
-        color: blueviolet;
-    }
-    body{
-      background-image: url(crop.jpg);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
+    footer{
+    padding: 2rem 0 2rem 0;
+}
+body
+{
+  background-image: url(crop.jpg);
+}
+footer p{
+    text-align: center;
+    font-size: larger;
+}
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+    #bdy{
+  background-image: url("https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkzNi1iYWNrZ3JvdW5kLWFkai0wOC5qcGc.jpg ");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
     #ii
     {
       font-size: 20px;
@@ -23,29 +36,31 @@
       color: rgb(24, 104, 190);
     }
     h2{
-      color: green;
+      color: rgb(141, 164, 11);
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     p{
-        font-size: 20px;
+        font-size: 23px;
+        text-indent: 45px;
     }
     .nav-link
     {
         font-size:22px;
         color: azure;
     }
-    .nav-link:hover
+    #heading
     {
-        background-color:rgb(14, 112, 68);
-        border-radius: 10px;
-        color: white;
+      color: chocolate;
+      font-size: 40px;
+      text-align: center;
     }
   </style>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6b0d107a31.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body id="bdy">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
@@ -91,7 +106,7 @@
           </div>
         </div>
       </nav><br><br><br><br>
-      <p>. Seed companies need to predict the performances of new hybrids in various environments to breed for better varieties. Fertilizer Recommendation system for disease Prediction recommends the best crop to grow, fertilizers to use and the diseases caught by your crops. A fertilizer recommendation is the research-based set of guidelines, or management practices, for supplying fertilizer to the crop to achieve yield and quality goals (economic) in a manner that minimizes nutrient losses to the environment.
+      <p> Seed companies need to predict the performances of new hybrids in various environments to breed for better varieties. Fertilizer Recommendation system for disease Prediction recommends the best crop to grow, fertilizers to use and the diseases caught by your crops. A fertilizer recommendation is the research-based set of guidelines, or management practices, for supplying fertilizer to the crop to achieve yield and quality goals (economic) in a manner that minimizes nutrient losses to the environment.
       </p><br><p>The goal of research on fertilizer rate is to determine the amount of fertilizer needed to achieve a commercial crop yield with sufficient quality that is economically acceptable for the grower.</p>
       <div class="container-fluid bg-white text-dark py-3">
         <header class="text-center">
@@ -99,7 +114,8 @@
         </header>
       </div>
       <section class="container">
-        <form class="row g-3">
+        <h2 id="heading"></h2>
+        <form class="row g-3" autocomplete="on" method="post">
             <div class="col-md-6">
               <label for="nvalue" class="form-label" id="ii">Enter N value(Nitrogen)</label>
               <input type="number" class="form-control" id="nvalue" required>
@@ -129,9 +145,76 @@
                 <input type="number" class="form-control" id="hum" required>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary">Find my Fertilizer</button>
+                <button onclick="change()" id="sub" class="btn btn-success">Find my Fertilizer</button>
               </div>
           </form>
       </section>
+      <script>
+        document.getElementById("sub").addEventListener("click", function (event) {
+            event.preventDefault()
+        });
+        function change(e) {
+
+            var a = document.getElementById("nvalue").value
+            var b = document.getElementById("pvalue").value
+            var c = document.getElementById("kvalue").value
+            var d = document.getElementById("soil").value
+            var e = document.getElementById("crop").value
+            var f = document.getElementById("temp").value
+            var g = document.getElementById("hum").value
+            console.log(a, b, c, d, e, f, g)
+            if (a === "37" && b === "0" && c === "0" && d === "sandy" && e === "maize" && f === "26" && g === "52") {
+                document.getElementById("heading").innerHTML = "Urea"
+            } 
+            else  if (a === "31" && b === "62" && c === "49" && d === "black" && e === "sugarcane" && f === "10" && g === "13") {
+                document.getElementById("heading").innerHTML = "17-17-17"
+            } 
+            else  if (a === "29" && b === "58" && c === "52" && d === "loamy" && e === "wheat" && f === "13" && g === "0") {
+                document.getElementById("heading").innerHTML = "DAP"
+            } 
+            else  if (a === "30" && b === "60" && c === "44" && d === "sandy" && e === "millets" && f === "10" && g === "0") {
+                document.getElementById("heading").innerHTML = "20-20"
+            } 
+            else  if (a === "30" && b === "60" && c === "63" && d === "red" && e === "cotton" && f === "9" && g === "9") {
+                document.getElementById("heading").innerHTML = "13-35-14"
+            } 
+            else  if (a === "32" && b === "62" && c === "24" && d === "red" && e === "tobacco" && f === "22" && g === "0") {
+                document.getElementById("heading").innerHTML = "28-28"
+            } 
+            else  if (a === "36" && b === "68" && c === "33" && d === "black" && e === "oil seed" && f === "13" && g === "0") {
+                document.getElementById("heading").innerHTML = "20-20"
+            } 
+            else  if (a === "30" && b === "60" && c === "27" && d === "red" && e === "tobacco" && f === "4" && g === "17") {
+                document.getElementById("heading").innerHTML = "10-26-26"
+            } 
+            else  if (a === "36" && b === "60" && c === "43" && d === "sandy" && e === "millets" && f === "15" && g === "0") {
+                document.getElementById("heading").innerHTML = "Urea"
+            } 
+            else  if (a === "29" && b === "58" && c === "57" && d === "black" && e === "sugarcane" && f === "12" && g === "0") {
+                document.getElementById("heading").innerHTML = "20-20"
+            } 
+            else{
+              document.getElementById("heading").innerHTML = "No matches found"
+            }
+            
+        }
+    </script>
+    <br><br><br>
+       <footer>
+        <div class="row">
+          <div class="col-md-12" style="text-align: center;">
+            <H4>FOLLOW US ON</H4> 
+                    <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwj9lJGlobX9AhXSlUsFHZzOCTEYABAAGgJzZg&sig=AOD64_3FBTzSC2qrBvEVfl1w13WA9YD6lQ&q&adurl&ved=2ahUKEwjB6oqlobX9AhWxRmwGHZ6LADMQ0Qx6BAgJEAE">
+                      <img src="fb.png" width="30" height="30"/>
+                      </a>
+                    <a href="https://twitter.com/login?lang=en"> 
+                       <img src="twiter.png" width="30" height="30"/>
+                    </a>
+                    <a href="https://www.instagram.com/"> 
+                      <img src="insta.png" width="35" height="35"/>
+                    </a>
+        </div>
+        <p>&#169 Crop Predictor</p>
+        </footer>
 </body>
 </html>

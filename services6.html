@@ -126,104 +126,7 @@ footer{
         </div>
       </nav>
       <br><br><br><br>
-      <p>
-        Earlier, crop cultivation was undertaken on the basis of farmers’ hands-on expertise. 
-        . Accurate crop prediction results in increased crop production.  In general, agro-climatic input parameters such as soil texture, rainfall, and temperature influence crop production. Input parameters for agriculture vary from region to region, and it is daunting to collect such information over large tracts of land. 
-        However, climate change has begun to affect crop yields badly.</p><br>
-      <p>Farmers can avoid stress and confusions which adversely gives them a confidence on their profession...You can predict your accurate crop by this technology...</p>
-      <div class="container-fluid bg-white text-dark py-3">
-        <header class="text-center">
-            <h2 id="or">Find your Recommended Crop</h2>
-        </header>
-      </div>
-      <section class="container">
-        <h1 id="heading"></h1>
-        <form class="row g-3" autocomplete="on" method="post">
-            <div class="col-md-6">
-              <label for="nvalue" class="form-label" id="ii">Enter N value(Nitrogen)</label>
-              <input type="number" class="form-control" id="nvalue" required>
-            </div>
-            <div class="col-md-6">
-              <label for="pvalue" class="form-label" id="ii">Enter P value(Phosphorous)</label>
-              <input type="number" class="form-control" id="pvalue" required>
-            </div>
-            <div class="col-md-6">
-                <label for="kvalue" class="form-label" id="ii">Enter K value(Potassium)</label>
-                <input type="number" class="form-control" id="kvalue" required>
-              </div>
-              <div class="col-md-6">
-                <label for="temp" class="form-label" id="ii">Temperature</label>
-                <input type="number" class="form-control" id="temp" required>
-              </div>
-              <div class="col-md-6">
-                <label for="hum" class="form-label" id="ii">Humidity</label>
-                <input type="number" class="form-control" id="hum" required>
-              </div>
-              <div class="col-md-6">
-                <label for="ph" class="form-label" id="ii">pH</label>
-                <input type="number" class="form-control" id="ph" required min="1" max="14">
-              </div>
-              <div class="col-md-6">
-                <label for="rain" class="form-label" id="ii">Annual Rainfall in mm</label>
-                <input type="number" class="form-control" id="rain" required>
-              </div><br>
-              <div class="col-12">
-                <button onclick="change()" id="sub" class="btn btn-success">Find my Crop</button>
-              </div>
-          </form>
-      </section><br><br>
-      <script>
-        document.getElementById("sub").addEventListener("click", function (event) {
-            event.preventDefault()
-        });
-        function change(e) {
-
-            var a = document.getElementById("nvalue").value
-            var b = document.getElementById("pvalue").value
-            var c = document.getElementById("kvalue").value
-            var d = document.getElementById("temp").value
-            var e = document.getElementById("hum").value
-            var f = document.getElementById("ph").value
-            var g = document.getElementById("rain").value
-            console.log(a, b, c, d, e, f, g)
-            if (a === "90" && b === "42" && c === "43" && d === "20" && e === "82" && f === "6" && g === "202") {
-                document.getElementById("heading").innerHTML = "Rice"
-            } 
-            else if (a === "93" && b === "41" && c === "17" && d === "25" && e === "66" && f === "6" && g === "105") {
-                document.getElementById("heading").innerHTML = "Maize"
-            } 
-            else if (a === "58" && b === "70" && c === "84" && d === "20" && e === "16" && f === "6" && g === "74") {
-                document.getElementById("heading").innerHTML = "ChickPea"
-            } 
-            else if (a === "28" && b === "58" && c === "24" && d === "19" && e === "18" && f === "5" && g === "143") {
-                document.getElementById("heading").innerHTML = "KidneyBeans"
-            } 
-            else if (a === "16" && b === "18" && c === "20" && d === "31" && e === "56" && f === "7" && g === "122") {
-                document.getElementById("heading").innerHTML = "PigeonPeas"
-            } 
-            else if (a === "26" && b === "52" && c === "23" && d === "29" && e === "49" && f === "4" && g === "52") {
-                document.getElementById("heading").innerHTML = "MothBeans"
-            } 
-            else if (a === "8" && b === "54" && c === "20" && d === "28" && e === "87" && f === "7" && g === "54") {
-                document.getElementById("heading").innerHTML = "MungBeans"
-            } 
-            else if (a === "53" && b === "67" && c === "17" && d === "31" && e === "69" && f === "7" && g === "61") {
-                document.getElementById("heading").innerHTML = "BlackGram"
-            } 
-            else if (a === "13" && b === "61" && c === "24" && d === "18" && e === "69" && f === "7" && g === "49") {
-                document.getElementById("heading").innerHTML = "Lentil"
-            } 
-            else if (a === "17" && b === "18" && c === "43" && d === "24" && e === "90" && f === "5" && g === "103") {
-                document.getElementById("heading").innerHTML = "Pomogranate"
-            }
-            else
-            {
-              document.getElementById("heading").innerHTML = "Rice"
-            }
-        }
-    </script>
-      <div class="container-fluid bg-white text-dark py-3">
-      <!-- <h2 id="ps">Planting Seasons</h2>
+      <h2 id="ps">Planting Seasons</h2>
       </div><br>
       <p>
         And also people as well as farmers are unaware of knowing the seasonal crops that has high demand and future impact in the place of food beverages.
@@ -328,7 +231,7 @@ footer{
             }
             
         }
-    </script>--><br><br><br>
+    </script><br><br><br>
     <footer>
       <div class="row">
         <div class="col-md-12" style="text-align: center;">

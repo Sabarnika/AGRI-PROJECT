@@ -3,19 +3,30 @@
   <title>Yield History</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6b0d107a31.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <style>
-    h1{
-        color: blueviolet;
-    }
+    footer{
+    padding: 2rem 0 2rem 0;
+}
+
+footer p{
+    text-align: center;
+    font-size: larger;
+}
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
     h2
     {
-      color: green;
+      color:rgb(141, 164, 11);
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
-    body{
-      background-image: url(crop.jpg);
+    .bdy{
+      background-image: url("https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkzNi1iYWNrZ3JvdW5kLWFkai0wOC5qcGc.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -36,18 +47,19 @@
         font-size:22px;
         color: azure;
     }
-    .nav-link:hover
+    #heading
     {
-        background-color:rgb(14, 112, 68);
-        border-radius: 10px;
-        color: white;
+      text-align: center;
+      font-size: 40px;
+      color: chocolate;
     }
   </style>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6b0d107a31.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body class="bdy">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
@@ -64,7 +76,7 @@
                 <a class="nav-link " href="crop.html">Crop Predictor</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="fertilizer.html">Fertilizer Predictor</a>
+                <a class="nav-link" href="fertilizer.html" >Fertilizer Predictor</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">Previous Yield</a>
@@ -109,7 +121,8 @@
         </header>
       </div>
       <section class="container">
-        <form class="row g-3" autocomplete="on">
+        <h2 id="heading"></h2>
+        <form class="row g-3" autocomplete="on" method="post">
               <div class="col-md-8">
                 <label for="crop" class="form-label" id="ii">Crop</label>
                <input type="text" class="form-control" id="crop">
@@ -177,9 +190,102 @@
               </div>
               <br>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary">View Past History</button>
+                <button onclick="change()" id="sub" class="btn btn-success">Know the yield</button>
               </div>
           </form>
       </section>
+      <script>
+        document.getElementById("sub").addEventListener("click", function (event) {
+            event.preventDefault()
+        });
+        function change(e) {
+
+            var a = document.getElementById("crop").value
+            var b = document.getElementById("year").value
+            var c = document.getElementById("area").value
+            var d = document.getElementById("dis").value
+            var e = document.getElementById("season").value
+            console.log(a, b, c, d, e)
+            if (a === "cashewnut" && b === "2009" && c === "31188" && d === "Ariyalur" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "9975"
+            } 
+            else if (a === "onion" && b === "1998" && c === "3093" && d === "Coimbatore" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "362"
+            } 
+            else if (a === "sunflower" && b === "1999" && c === "8001" && d === "Cuddalore" && e === "Kharif") {
+                document.getElementById("heading").innerHTML = "95"
+            } 
+            else if (a === "ragi" && b === "2000" && c === "89722" && d === "Dharmapuri" && e === "Kharif") {
+                document.getElementById("heading").innerHTML = "71"
+            } 
+            else if (a === "coriander" && b === "1999" && c === "355" && d === "Dindigul" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "25"
+            } 
+            else if (a === "ginger" && b === "1999" && c === "1" && d === "Erode" && e === "Kharif") {
+                document.getElementById("heading").innerHTML = "27"
+            } 
+            else if (a === "cashewnut" && b === "1998" && c === "284" && d === "Kancheepuram" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "58"
+            } 
+            else if (a === "groundnut" && b === "2002" && c === "42" && d === "Krishnagiri" && e === "Kharif") {
+                document.getElementById("heading").innerHTML = "44"
+            } 
+            else if (a === "banana" && b === "1999" && c === "5092" && d === "Karur" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "181514"
+            } 
+            else if (a === "rice" && b === "2004" && c === "17620" && d === "Krishnagiri" && e === "Kharif") {
+                document.getElementById("heading").innerHTML = "45254"
+            } 
+            else if (a === "samai" && b === "1999" && c === "576" && d === "Madurai" && e === "Rabi") {
+                document.getElementById("heading").innerHTML = "58"
+            } 
+            else if (a === "chillies" && b === "1997" && c === "28" && d === "Nilgiri" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "20"
+            } 
+            else if (a === "gram" && b === "1999" && c === "616" && d === "Nagercoil" && e === "Rabi") {
+                document.getElementById("heading").innerHTML = "406"
+            } 
+            else if (a === "sweet potato" && b === "1999" && c === "10" && d === "Namakkal" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "121"
+            } 
+            else if (a === "sugarcane" && b === "1998" && c === "2829" && d === "Salem" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "347210"
+            } 
+            else if (a === "mango" && b === "2002" && c === "121" && d === "Theni" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "725"
+            } 
+            else if (a === "sesamum" && b === "1999" && c === "11453" && d === "Trichy" && e === "Kharif") {
+                document.getElementById("heading").innerHTML = "8373"
+            } 
+            else if (a === "turmeric" && b === "2002" && c === "1" && d === "Vellore" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "4"
+            } 
+            else if (a === "coconut" && b === "2009" && c === "31188" && d === "Villupuram" && e === "WholeYear") {
+                document.getElementById("heading").innerHTML = "9975"
+            } 
+            else 
+            {
+              document.getElementById("heading").innerHTML = "District doesn't exists" 
+            }
+        }
+    </script>
+    <br><br><br>
+       <footer>
+        
+        <div class="row">
+          <div class="col-md-12" style="text-align: center;">
+            <H4>FOLLOW US ON</H4> 
+                    <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwj9lJGlobX9AhXSlUsFHZzOCTEYABAAGgJzZg&sig=AOD64_3FBTzSC2qrBvEVfl1w13WA9YD6lQ&q&adurl&ved=2ahUKEwjB6oqlobX9AhWxRmwGHZ6LADMQ0Qx6BAgJEAE">
+                      <img src="fb.png" width="30" height="30"/>
+                      </a>
+                    <a href="https://twitter.com/login?lang=en"> 
+                       <img src="twiter.png" width="30" height="30"/>
+                    </a>
+                    <a href="https://www.instagram.com/"> 
+                      <img src="insta.png" width="35" height="35"/>
+                   </a>
+          </div>
+          <p>&#169 Crop Predictor</p>
+        </footer>
 </body>
 </html>
