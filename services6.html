@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Crop Predictor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6b0d107a31.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body{
+      background-image: url(https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkzNi1iYWNrZ3JvdW5kLWFkai0wOC5qcGc.jpg );
+    }
+    footer{
+    padding: 2rem 0 2rem 0;
+}
+
+footer p{
+    text-align: center;
+    font-size: larger;
+}
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+    h2{
+      color:rgb(141, 164, 11);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .bdy
+    {
+      background-image: url("https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjkzNi1iYWNrZ3JvdW5kLWFkai0wOC5qcGc.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+    h2{
+      text-align: center;
+      font-size: 30px;
+    }
+    #ii
+    {
+      font-size: 20px;
+      font-weight:500;
+      color: rgb(24, 104, 190);
+    }
+    p{
+        font-size: 23px;
+        text-indent: 30px;
+    }
+    .nav-link
+    {
+        font-size:22px;
+        color: azure;
+    }
+    .yld
+    {
+      text-indent: 30px;
+    }
+    #heading,#heads
+    {
+      font-size: 45px;
+      text-align: center;
+      color: chocolate;
+    }
+    #h2
+    {
+      font-family: 'Times New Roman', Times, serif;
+      color: chocolate;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6b0d107a31.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <scr src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bdy">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <h1>Crop Predictor</h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="crop.html">Crop Predictor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fertilizer.html">Fertilizer Predictor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="history.html">Previous Yield</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Settings
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="reset.html">Reset Password</a></li>
+                  <li><a class="dropdown-item" href="#">History</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-but">
+                <a class="btn btn-outline-light" href="signup.html">SignUp</a>
+            </li>
+            <li class="nav-but">
+                <a class="btn btn-outline-light" href="login.html">Login</a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br>
+      <h2 id="ps">Planting Seasons</h2>
+      </div><br>
+      <p>
+        And also people as well as farmers are unaware of knowing the seasonal crops that has high demand and future impact in the place of food beverages.
+        All crops can't be cultivated in any of the month.And the yield also depends on season to season.It's our responsibility to find the suitable crop. To know those information, you can refer here.....
+      </p>
+      <section class="container">
+        <h2 id="heads"></h2>
+        <form class="row g-3" autocomplete="on" method="post">
+          <div class="col-md-12">
+            <label class="form-label" for="season" id="ii">Season</label>
+            <select name="season" id="season">
+                <option value=""></option>
+                  <option value="Kharif">Kharif</option>
+                  <option value="Rabi">Rabi</option>
+                  <option value="Zaid">Zaid</option>
+                  <option value="WholeYear">WholeYear</option>
+            </select>
+          </div>
+        <div class="col-md-12">
+          <label class="form-label" for="month" id="ii">Month</label>
+          <select name="month" id="month">
+              <option value=""></option>
+                <option value="Jan">January</option>
+                <option value="Feb">February</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="may">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+          </select>
+        </div><br>
+        <p class="yld">Do you want to know the yield ?</p>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="yield">
+            Yes 
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="yield">
+            No
+          </label>
+        </div><br><br>
+        <div class="col-12">
+          <button onclick="changes()" id="sub1" class="btn btn-success">Find Seasonal crop and Yield</button>
+        </div>
+        </form>
+      </section> 
+      <script>
+        document.getElementById("sub1").addEventListener("click", function (event) {
+            event.preventDefault()
+        });
+        function changes(e) {
+
+            var a = document.getElementById("season").value
+            var b = document.getElementById("month").value
+            if (a==="Kharif" && b==="July") {
+                document.getElementById("heads").innerHTML = "Rice"
+            } 
+            else if (a==="Kharif" && b==="Aug") {
+                document.getElementById("heads").innerHTML = "Millet"
+            } 
+            else if (a==="Kharif" && b==="Sep") {
+                document.getElementById("heads").innerHTML = "Maize"
+            } 
+            else if (a==="Kharif" && b==="Oct") {
+                document.getElementById("heads").innerHTML = "SoyaBean/Corn"
+            } 
+            else if (a==="Rabi" && b==="Nov") {
+                document.getElementById("heads").innerHTML = "Gram/Oats"
+            } 
+            else if (a==="Rabi" && b==="Dec") {
+                document.getElementById("heads").innerHTML = "Mustard"
+            } 
+            else if (a==="Rabi" && b==="Jan") {
+                document.getElementById("heads").innerHTML = "Wheat"
+            } 
+            else if (a==="Rabi" && b==="Feb") {
+                document.getElementById("heads").innerHTML = "Barley"
+            } 
+            else if (a==="Rabi" && b==="Mar") {
+                document.getElementById("heads").innerHTML = "Bajra"
+            } 
+            else if (a==="Zaid" && b==="Apr") {
+                document.getElementById("heads").innerHTML = "Pumpkin"
+            } 
+            else if (a==="Zaid" && b==="May") {
+                document.getElementById("heads").innerHTML = "Bitter Gourd"
+            } 
+            else if (a==="Zaid" && b==="Jun") {
+                document.getElementById("heads").innerHTML = "Cucumber"
+            } 
+            else
+            {
+              document.getElementById("heads").innerHTML = "Best suited for all" 
+            }
+            
+        }
+    </script><br><br><br>
+    <footer>
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <H4>FOLLOW US ON</H4> 
+                  <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwj9lJGlobX9AhXSlUsFHZzOCTEYABAAGgJzZg&sig=AOD64_3FBTzSC2qrBvEVfl1w13WA9YD6lQ&q&adurl&ved=2ahUKEwjB6oqlobX9AhWxRmwGHZ6LADMQ0Qx6BAgJEAE">
+                    <img src="fb.png" width="30" height="30"/>
+                    </a>
+                  <a href="https://twitter.com/login?lang=en"> 
+                     <img src="twiter.png" width="30" height="30"/>
+                  </a>
+                  <a href="https://www.instagram.com/"> 
+                    <img src="insta.png" width="35" height="35"/>
+                  </a>
+      </div>
+        <p>&#169 Crop Predictor</p>
+      </div>
+      </footer>
+</body>
+</html>
